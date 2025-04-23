@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8" />
-  <title>تحدي الرصيد</title>
+    <meta charset="UTF-8">
+    <title>الرئيسية</title>
+    <style>
+        body {
+            direction: rtl;
+            font-family: Arial;
+            text-align: center;
+            background: #111;
+            color: white;
+            padding-top: 50px;
+        }
+        .card {
+            background: #222;
+            border-radius: 12px;
+            padding: 30px;
+            width: 80%;
+            margin: auto;
+            box-shadow: 0 0 10px #000;
+        }
+        .balance {
+            font-size: 40px;
+            color: #00ff88;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-  <h1>احزر الرصيد واربح!</h1>
-  <p>جرب تحزر الرصيد المكون من 12 رقم</p>
+    <div class="card">
+        <h1>أهلاً بك في موقع الرصيد</h1>
+        <p>رصيدك الحالي هو:</p>
+        <div class="balance" id="balance">---</div>
+    </div>
+
+    <script>
+        // توليد رصيد عشوائي بين 10000 و 999999999
+        const randomBalance = Math.floor(Math.random() * (999999999 - 10000 + 1)) + 10000;
+        document.getElementById("balance").innerText = randomBalance;
+    </script>
 </body>
 </html>
